@@ -1,3 +1,16 @@
 <button class="button button-primary" (click)="subscribeToNotifications()">
   Subscribe
 </button>
+<div>
+  <button (click)="fetchData()">Fetch</button>
+  <button (click)="clearData()">Clear</button>
+</div>
+
+<section class="user-list-container">
+  <ng-container *ngFor="let user of users">
+    <div class="user">
+      <h4>{{user.name}}</h4>
+    </div>
+  </ng-container>
+</section>
+<router-outlet></router-outlet>
